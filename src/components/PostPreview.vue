@@ -99,17 +99,19 @@ function handleCommentCancel(prev) {
 }
 
 function handleCommentDelete(id) {
-  loading.value = true
-  deleteComment(id)
-    .then(() => {
-      getAllComments(postId.value)
-    })
-    .catch((e) => {
-      error.value = e
-    })
-    .finally(() => {
-      loading.value = false
-    })
+  // loading.value = true
+  // deleteComment(id)
+  //   .then(() => {
+  //     getAllComments(postId.value)
+  //   })
+  //   .catch((e) => {
+  //     error.value = e
+  //   })
+  //   .finally(() => {
+  //     loading.value = false
+  //   })
+  comments.value = comments.value.filter(com => com.id !== id)
+  deleteComment(id).catch(e=>console.error(e))
 }
 </script>
 
