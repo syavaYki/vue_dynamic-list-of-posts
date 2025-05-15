@@ -5,22 +5,22 @@ const emit = defineEmits(['open', 'close', 'create'])
 
 <template>
   <div>
-    <div className="tile is-parent">
-      <div className="tile is-child box is-success">
-        <div className="block">
-          <div className="block is-flex is-justify-content-space-between">
-            <p className="title">Posts</p>
-            <button type="button" className="button is-link" @click="emit('create')">
+    <div class="tile is-parent">
+      <div class="tile is-child box is-success">
+        <div class="block">
+          <div class="block is-flex is-justify-content-space-between">
+            <p class="title">Posts</p>
+            <button type="button" class="button is-link" @click="emit('create')">
               Add New Post
             </button>
           </div>
 
-          <table className="table is-fullwidth is-striped is-hoverable is-narrow">
+          <table class="table is-fullwidth is-striped is-hoverable is-narrow">
             <thead>
-              <tr className="has-background-link-light">
+              <tr class="has-background-link-light">
                 <th>ID</th>
                 <th>Title</th>
-                <th className="has-text-right">Actions</th>
+                <th class="has-text-right">Actions</th>
               </tr>
             </thead>
 
@@ -30,11 +30,11 @@ const emit = defineEmits(['open', 'close', 'create'])
 
                 <td>{{ post.title }}</td>
 
-                <td className="has-text-right is-vcentered">
+                <td class="has-text-right is-vcentered">
                   <button
                     v-if="props.active === post.id && props.active"
                     type="button"
-                    className="button is-link"
+                    class="button is-link"
                     @click="emit('close')"
                   >
                     Close
@@ -43,7 +43,7 @@ const emit = defineEmits(['open', 'close', 'create'])
                   <button
                     v-else
                     type="button"
-                    className="button is-link"
+                    class="button is-link"
                     @click="emit('open', post.id)"
                   >
                     Open

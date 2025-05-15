@@ -126,7 +126,7 @@ function handlePostDelete(id) {
     })
 }
 
-function hanleShowEditing() {
+function handleShowEditing() {
   postToEdit.value = activePost.value
   handleClose()
   isEditingPost.value = true
@@ -182,7 +182,7 @@ function handleLogOut() {
     <LogIn :error="logInError" @submit="handleLogIn" />
   </div>
   <div v-else>
-    <AppHeader class="navbar" :userName="user?.name" @logOut="handleLogOut" />
+    <AppHeader class="navbar" :userName="user && user.name" @logOut="handleLogOut" />
 
     <div v-if="loading">
       <LoaderComponent />
@@ -203,7 +203,7 @@ function handleLogOut() {
         <SideBar
           v-if="activePost"
           :activePost="activePost"
-          @edit="hanleShowEditing"
+          @edit="handleShowEditing"
           @delete="handlePostDelete"
         />
 

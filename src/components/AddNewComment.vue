@@ -46,12 +46,12 @@ function handleCancel() {
         </div>
       </div>
 
-      <div className="field is-grouped">
-        <div className="control">
+      <div class="field is-grouped">
+        <div class="control">
           <button class="button is-link">Add comment</button>
         </div>
-        <div className="control">
-          <button type="button" className="button is-link is-light" @click="handleCancel()">
+        <div class="control">
+          <button type="button" class="button is-link is-light" @click="handleCancel()">
             Cancel
           </button>
         </div>

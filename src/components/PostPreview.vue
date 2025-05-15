@@ -99,19 +99,8 @@ function handleCommentCancel(prev) {
 }
 
 function handleCommentDelete(id) {
-  // loading.value = true
-  // deleteComment(id)
-  //   .then(() => {
-  //     getAllComments(postId.value)
-  //   })
-  //   .catch((e) => {
-  //     error.value = e
-  //   })
-  //   .finally(() => {
-  //     loading.value = false
-  //   })
-  comments.value = comments.value.filter(com => com.id !== id)
-  deleteComment(id).catch(e=>console.error(e))
+  comments.value = comments.value.filter((com) => com.id !== id)
+  deleteComment(id).catch((e) => console.error(e))
 }
 </script>
 
@@ -161,8 +150,8 @@ function handleCommentDelete(id) {
             </div>
           </div>
 
-          <div className="block" v-else>
-            <p className="title is-4">No comments yet</p>
+          <div class="block" v-else>
+            <p class="title is-4">No comments yet</p>
           </div>
         </div>
 

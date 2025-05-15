@@ -29,12 +29,12 @@ function handleSubmit() {
         </div>
       </div>
 
-      <div className="field is-grouped">
-        <div className="control">
+      <div class="field is-grouped">
+        <div class="control">
           <button class="button is-link">Save</button>
         </div>
-        <div className="control">
-          <button type="reset" className="button is-link is-light">Cancel</button>
+        <div class="control">
+          <button type="reset" class="button is-link is-light">Cancel</button>
         </div>
       </div>
     </form>

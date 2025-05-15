@@ -17,7 +17,7 @@ const userEmail = computed(() => {
       <a :href="`mailto:${userEmail}`"> {{ props.comment?.name }} </a>
       <button
         type="button"
-        className="delete is-small"
+        class="delete is-small"
         aria-label="delete"
         @click="emit('delete')"
       ></button>

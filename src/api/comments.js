@@ -4,13 +4,13 @@ export const getPostsCommentsApi = async (id) => {
   if (!id) {
     return
   }
-  const resp = client.get(`/comments?postId=${id}`)
+  const resp = await client.get(`/comments?postId=${id}`)
 
   return resp
 }
 
-export const createComment = (postId, name, email, body) => {
-  const resp = client.post('/comments/', {
+export const createComment = async (postId, name, email, body) => {
+  const resp = await client.post('/comments/', {
     postId,
     name,
     email,
@@ -20,8 +20,8 @@ export const createComment = (postId, name, email, body) => {
   return resp
 }
 
-export const deleteComment = (id) => {
-  const resp = client.delete(`/comments/${id}`)
+export const deleteComment = async (id) => {
+  const resp = await client.delete(`/comments/${id}`)
 
   return resp
 }

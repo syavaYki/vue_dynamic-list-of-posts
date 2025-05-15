@@ -7,8 +7,8 @@ const emit = defineEmits(['delete', 'edit'])
 
 <template>
   <div :class="['SideBar', { 'Sidebar--open': props.activePost?.id }]">
-    <div className="tile is-child box is-success ">
-      <div className="content">
+    <div class="tile is-child box is-success">
+      <div class="content">
         <PostPreview
           :post="props.activePost"
           @edit="emit('edit', $event)"
