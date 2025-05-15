@@ -14,7 +14,7 @@ const userEmail = computed(() => {
 <template>
   <article class="message is-small">
     <div class="message-header">
-      <a :href="`mailto:${userEmail}`"> {{ props.comment?.name }} </a>
+      <a :href="`mailto:${props.comment.email}`"> {{ props.comment?.name }} </a>
       <button
         type="button"
         class="delete is-small"

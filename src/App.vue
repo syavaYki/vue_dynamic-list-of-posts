@@ -207,7 +207,11 @@ function handleLogOut() {
           @delete="handlePostDelete"
         />
 
-        <AddNewPost v-if="isCreatingPost" @newMessage="handleCreateNewMessage" />
+        <AddNewPost
+          v-if="isCreatingPost"
+          @newMessage="handleCreateNewMessage"
+          @cancel="isCreatingPost.value = false"
+        />
 
         <PostEditing v-if="isEditingPost" :post="postToEdit" @edit="handlePostEdit" />
       </div>

@@ -34,7 +34,9 @@ function handleSubmit() {
           <button class="button is-link">Save</button>
         </div>
         <div class="control">
-          <button type="reset" class="button is-link is-light">Cancel</button>
+          <button type="reset" class="button is-link is-light" @click="emit('cancel')">
+            Cancel
+          </button>
         </div>
       </div>
     </form>
